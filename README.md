@@ -72,6 +72,12 @@ MAE similarity는 `100 * (1 - mean(abs(candidate - reference)) / 255)`로 계산
 
 ![Paired recurrence graph](experiments/recurrence_5x/similarity_curve.png)
 
+### Pass 5 확대 비교
+
+파란 박스로 표시한 동일한 220×220 영역을 3배 확대해 원본, 무보정 Pass 5, 보정 Pass 5의 도어 하단·사이드실·바닥 질감을 비교했습니다.
+
+![Pass 5 ROI zoom comparison](experiments/recurrence_5x/pass5_roi_zoom_comparison.png)
+
 ## 패턴 시각화
 
 시각화 이미지는 표시를 위해 채널 DC를 제거하고 자동 gain을 적용한 결과입니다. 화면에 보이는 강도는 실제 보정량과 다릅니다.

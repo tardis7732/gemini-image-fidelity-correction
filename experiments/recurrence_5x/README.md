@@ -30,6 +30,8 @@ corrected: G1 -> C1 -> G2' -> C2 -> G3' -> C3 -> G4' -> C4 -> G5' -> C5
 
 ![Paired recurrence contact sheet](comparison_contact_sheet.png)
 
+![Pass 5 ROI zoom comparison](pass5_roi_zoom_comparison.png)
+
 The final corrected-chain similarity was `98.2248%`, compared with `96.4261%` for the raw chain, a difference of `+1.7986%p`. The mean immediate correction gain across five passes was `+0.1244%p`.
 
 The correction improved the current image at every pass. The later chain-to-chain comparison also contains Gemini sampling variance because the corrected image changes the next request input.
