@@ -78,6 +78,12 @@ MAE similarity는 `100 * (1 - mean(abs(candidate - reference)) / 255)`로 계산
 
 ![Pass 5 ROI zoom comparison](experiments/recurrence_5x/pass5_roi_zoom_comparison.png)
 
+1024×1024 원본 비교 파일:
+
+- [원본](experiments/recurrence_5x/pass5_comparison_1024/01_original_1024.png)
+- [무보정 Pass 5](experiments/recurrence_5x/pass5_comparison_1024/02_pass5_uncorrected_1024.png)
+- [보정 Pass 5](experiments/recurrence_5x/pass5_comparison_1024/03_pass5_corrected_1024.png)
+
 ## 패턴 시각화
 
 시각화 이미지는 표시를 위해 채널 DC를 제거하고 자동 gain을 적용한 결과입니다. 화면에 보이는 강도는 실제 보정량과 다릅니다.
