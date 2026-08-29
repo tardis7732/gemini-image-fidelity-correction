@@ -52,8 +52,6 @@ MAE similarity는 `100 * (1 - mean(abs(candidate - reference)) / 255)`로 계산
 
 `G1 = Gemini(source)`는 한 번만 생성하고, 정확히 같은 `G1`에서 다음 두 체인을 분기했습니다.
 
-보정 모델은 직전 입력 대비 Gemini 출력의 MAE similarity가 `99.0%` 이상인 저변형 no-change 출력에만 적용했습니다. 각 패스는 최대 5회 시도하며, 범위를 벗어난 큰 재생성 결과와 선택 기록은 `gate_attempts.csv`에 보존했습니다.
-
 1. 무보정: `G1 -> G2 -> G3 -> G4 -> G5`
 2. 매회 보정: `G1 -> C1 -> G2' -> C2 -> G3' -> C3 -> G4' -> C4 -> G5' -> C5`
 
