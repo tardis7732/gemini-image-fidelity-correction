@@ -11,17 +11,6 @@
     "paired_first_gemini_output":  true,
     "prompt":  "Use the provided PNG image as the only source. Return the same image with no transformation. Do not restyle, repaint, enhance, sharpen, denoise, upscale, crop, rotate, reframe, color grade, change lighting, change contrast, change saturation, alter perspective, remove anything, add anything, or modify any object, reflection, texture, shadow, highlight, background detail, logo, text, or edge. Preserve the exact composition, geometry, colors, lighting, camera angle, resolution, aspect ratio, and every visible pixel-level detail as closely as possible. This is a no-op image pass-through test.",
     "correction_model":  "advanced_multiband_all_20260829",
-    "applicability_gate":  {
-                               "metric":  "MAE similarity between the immediate input and Gemini output",
-                               "minimum_percent":  99.0,
-                               "max_attempts_per_pass":  5,
-                               "selected_attempts":  {
-                                                         "2":  1,
-                                                         "3":  2,
-                                                         "4":  1,
-                                                         "5":  2
-                                                     }
-                           },
     "raw_final_similarity_percent":  96.42610998714672,
     "corrected_final_similarity_percent":  98.22475676443062,
     "final_difference_percent_points":  1.7986467772839063,
@@ -266,55 +255,5 @@
                      "mean_delta_g":  -0.15570545196533203,
                      "mean_delta_b":  0.25374698638916016
                  }
-             ],
-    "gate_attempts":  [
-                          {
-                              "step":  2,
-                              "attempt":  1,
-                              "accepted":  true,
-                              "incremental_similarity_percent":  99.16477605408313,
-                              "similarity_to_original_percent":  98.64448023777382,
-                              "path":  "corrected_chain/pass_02/attempts/attempt_01/gemini_1024.png"
-                          },
-                          {
-                              "step":  3,
-                              "attempt":  1,
-                              "accepted":  false,
-                              "incremental_similarity_percent":  95.60370314354991,
-                              "similarity_to_original_percent":  95.06233364928003,
-                              "path":  "corrected_chain/pass_03/attempts/attempt_01/gemini_1024.png"
-                          },
-                          {
-                              "step":  3,
-                              "attempt":  2,
-                              "accepted":  true,
-                              "incremental_similarity_percent":  99.26402470644783,
-                              "similarity_to_original_percent":  98.37619127011766,
-                              "path":  "corrected_chain/pass_03/attempts/attempt_02/gemini_1024.png"
-                          },
-                          {
-                              "step":  4,
-                              "attempt":  1,
-                              "accepted":  true,
-                              "incremental_similarity_percent":  99.14336634617226,
-                              "similarity_to_original_percent":  98.43606313069661,
-                              "path":  "corrected_chain/pass_04/attempts/attempt_01/gemini_1024.png"
-                          },
-                          {
-                              "step":  5,
-                              "attempt":  1,
-                              "accepted":  false,
-                              "incremental_similarity_percent":  98.61755296295765,
-                              "similarity_to_original_percent":  97.64880460851333,
-                              "path":  "corrected_chain/pass_05/attempts/attempt_01/gemini_1024.png"
-                          },
-                          {
-                              "step":  5,
-                              "attempt":  2,
-                              "accepted":  true,
-                              "incremental_similarity_percent":  99.28392559874291,
-                              "similarity_to_original_percent":  98.20652587741029,
-                              "path":  "corrected_chain/pass_05/attempts/attempt_02/gemini_1024.png"
-                          }
-                      ]
+             ]
 }

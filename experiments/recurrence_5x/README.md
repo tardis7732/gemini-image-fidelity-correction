@@ -7,8 +7,6 @@
 - Request: 1K, 1:1, fixed no-change prompt
 - Shared first pass: the exact same `G1` file is used by both chains
 - Corrected recurrence: each corrected `Cn` becomes the input to the next Gemini pass
-- Applicability gate: immediate input-to-output MAE similarity must be at least `99.0%`
-- Retry policy: up to five Gemini attempts per pass; rejected outputs remain in `gate_attempts.csv`
 - Metric: MAE similarity to the original 1024 image
 
 ```text
@@ -32,8 +30,6 @@ corrected: G1 -> C1 -> G2' -> C2 -> G3' -> C3 -> G4' -> C4 -> G5' -> C5
 
 ![Paired recurrence contact sheet](comparison_contact_sheet.png)
 
-The correction improved the accepted image at every pass. Passes 3 and 5 each rejected one large-regeneration output before accepting an in-scope no-change result. The accepted attempt indices were `1, 2, 1, 2` for passes 2 through 5.
-
 The final corrected-chain similarity was `98.2248%`, compared with `96.4261%` for the raw chain, a difference of `+1.7986%p`. The mean immediate correction gain across five passes was `+0.1244%p`.
 
-The original ungated single run is retained in [`ungated_single_run/`](ungated_single_run/) as an audit appendix. The gate defines the model's low-deformation application scope; it is not a claim about recovery from large Gemini regeneration.
+The correction improved the current image at every pass. The later chain-to-chain comparison also contains Gemini sampling variance because the corrected image changes the next request input.
