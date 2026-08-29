@@ -63,7 +63,7 @@ MAE similarity는 `100 * (1 - mean(abs(candidate - reference)) / 255)`로 계산
 
 ![5-pass recurrence comparison](experiments/recurrence_5x/comparison_contact_sheet.png)
 
-![Similarity curve](experiments/recurrence_5x/similarity_curve.png)
+![Paired recurrence graph](experiments/recurrence_5x/similarity_curve.png)
 
 ## 패턴 시각화
 

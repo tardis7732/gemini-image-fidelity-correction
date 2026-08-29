@@ -26,6 +26,8 @@ corrected: G1 -> C1 -> G2' -> C2 -> G3' -> C3 -> G4' -> C4 -> G5' -> C5
 
 ![Paired metrics table](paired_metrics_table.png)
 
+![Paired recurrence graph](similarity_curve.png)
+
 ![Paired recurrence contact sheet](comparison_contact_sheet.png)
 
 The correction improved the current image at every pass. The later chain-to-chain comparison also contains Gemini sampling variance because the corrected image changes the next request input.
