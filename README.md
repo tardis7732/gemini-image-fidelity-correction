@@ -2,6 +2,8 @@
 
 Gemini 이미지 편집을 `no-change` 프롬프트로 반복할 때 누적되는 미세한 RGB, 질감, 주파수 드리프트를 원본 없이 완화하는 실험적 보정 모델입니다. 추론 시에는 생성된 이미지 한 장만 사용합니다.
 
+학습·평가 데이터는 Gemini 3.1 Flash Image API 모델인 `gemini-3.1-flash-image`에서 생성했으며, `1:1`과 `16:9` 비율의 `1K`·`2K` 네 가지 조합을 모두 포함합니다.
+
 > Research prototype. This repository is an image-fidelity experiment, not a forensic detector or a guaranteed inverse of a generative model.
 
 ## 구조

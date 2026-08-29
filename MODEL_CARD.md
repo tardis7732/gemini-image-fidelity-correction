@@ -6,6 +6,8 @@
 
 ## Training and evaluation snapshot
 
+- Generator: Gemini 3.1 Flash Image (`gemini-3.1-flash-image`)
+- Covered formats: `1:1` and `16:9` at both `1K` and `2K`
 - Training/evaluation pairs: 342
 - Validation: source identity로 묶은 grouped 5-fold
 - Sampling: 이미지당 deterministic 12,000 pixels
