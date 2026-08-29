@@ -5,9 +5,16 @@
 - Input: one real automobile image, center-cropped without distortion to 1024x1024
 - Gemini model: `gemini-3.1-flash-image`
 - Request: 1K, 1:1, fixed no-change prompt
-- Shared first pass: yes
-- Correction: `advanced_multiband_all_20260829`, no spatial taper
+- Shared first pass: the exact same `G1` file is used by both chains
+- Corrected recurrence: each corrected `Cn` becomes the input to the next Gemini pass
 - Metric: MAE similarity to the original 1024 image
+
+```text
+G1 = Gemini(source)  # generated once
+
+raw:       G1 -> G2 -> G3 -> G4 -> G5
+corrected: G1 -> C1 -> G2' -> C2 -> G3' -> C3 -> G4' -> C4 -> G5' -> C5
+```
 
 | Pass | Gemini only | Corrected-chain before | Corrected-chain after | Immediate gain | Chain gain vs raw |
 |---:|---:|---:|---:|---:|---:|

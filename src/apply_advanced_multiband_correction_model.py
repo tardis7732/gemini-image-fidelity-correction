@@ -249,7 +249,6 @@ def main() -> int:
                 "mean_abs_correction_rgb": [
                     float(value) for value in np.mean(np.abs(correction), axis=(0, 1))
                 ],
-                "spatial_taper": False,
                 "gamut_limited_fraction": float(np.mean(mapping_scale < 1.0)),
             },
             ensure_ascii=False,
