@@ -1,8 +1,14 @@
 # Gemini Image Fidelity Correction
 
-Gemini 이미지 편집을 `no-change` 프롬프트로 반복할 때 누적되는 미세한 RGB, 질감, 주파수 드리프트를 원본 없이 완화하는 실험적 보정 모델입니다. 추론 시에는 생성된 이미지 한 장만 사용합니다.
+반복적인 생성형 이미지 편집 과정에서 발생하는 색상과 화질의 누적 변화를 완화하기 위해 개발한 reference-free 이미지 보정 모델입니다.
 
-학습·평가 데이터는 Gemini 3.1 Flash Image API 모델인 `gemini-3.1-flash-image`에서 생성했으며, `1:1`과 `16:9` 비율의 `1K`·`2K` 네 가지 조합을 모두 포함합니다.
+## 개발 배경
+
+[Google DeepMind는 SynthID가 사람의 눈에 보이지 않으며 이미지 품질을 바꾸지 않도록 설계됐다고 설명합니다.](https://deepmind.google/models/synthid/) 그러나 실제 제작 환경에서 동일한 이미지를 Gemini에 반복 입력하고 결과를 다시 덮어쓰며 편집하면, `no-change` 요청에서도 패스가 누적될수록 미세한 RGB 편향, 채도 변화, 선명도 저하와 고주파 질감 손실이 관찰됐습니다.
+
+이 프로젝트는 SynthID가 포함된 Google 이미지 생성 파이프라인을 여러 번 통과할 때 남는 미세 잔차가 반복 작업에서 누적될 수 있다는 문제의식에서 시작했습니다. 각 패스의 원본과 출력 차이를 RGB 채널, 공간 패턴, 대각선 위상과 주파수 성분으로 분해한 뒤, 다음 편집 전에 반대 방향의 보정값을 적용할 수 있도록 잔차를 역산하는 방식으로 모델을 구성했습니다.
+
+학습·평가 데이터는 Gemini 3.1 Flash Image API 모델인 `gemini-3.1-flash-image`에서 생성했으며, `1:1`과 `16:9` 비율의 `1K`·`2K` 네 가지 조합을 모두 포함합니다. 학습 단계에서는 원본과 생성 결과의 쌍을 사용하지만, 실제 추론에서는 원본 없이 현재 생성 이미지 한 장만으로 RGB·질감·주파수 보정 필드를 예측합니다.
 
 > Research prototype. This repository is an image-fidelity experiment, not a forensic detector or a guaranteed inverse of a generative model.
 
