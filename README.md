@@ -59,6 +59,8 @@ MAE similarity는 `100 * (1 - mean(abs(candidate - reference)) / 255)`로 계산
 
 최종 MAE similarity는 무보정 체인 `96.4261%`, 매회 보정 체인 `97.1766%`로 `+0.7505%p` 높았습니다. 각 회차에서 보정 직전과 직후만 비교하면 5회 모두 양수였고 평균은 `+0.1325%p`였습니다. 다만 2회차부터는 Gemini 재생성이 확률적이므로 두 체인의 단계별 차이를 보정 모델 하나의 인과 효과로 해석하면 안 됩니다.
 
+![Paired recurrence metrics](experiments/recurrence_5x/paired_metrics_table.png)
+
 ![5-pass recurrence comparison](experiments/recurrence_5x/comparison_contact_sheet.png)
 
 ![Similarity curve](experiments/recurrence_5x/similarity_curve.png)
