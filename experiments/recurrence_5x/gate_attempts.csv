@@ -1,0 +1,7 @@
+﻿"step","attempt","accepted","incremental_similarity_percent","similarity_to_original_percent","path"
+"2","1","True","99.16477605408313","98.64448023777382","corrected_chain/pass_02/attempts/attempt_01/gemini_1024.png"
+"3","1","False","95.60370314354991","95.06233364928003","corrected_chain/pass_03/attempts/attempt_01/gemini_1024.png"
+"3","2","True","99.26402470644783","98.37619127011766","corrected_chain/pass_03/attempts/attempt_02/gemini_1024.png"
+"4","1","True","99.14336634617226","98.43606313069661","corrected_chain/pass_04/attempts/attempt_01/gemini_1024.png"
+"5","1","False","98.61755296295765","97.64880460851333","corrected_chain/pass_05/attempts/attempt_01/gemini_1024.png"
+"5","2","True","99.28392559874291","98.20652587741029","corrected_chain/pass_05/attempts/attempt_02/gemini_1024.png"
