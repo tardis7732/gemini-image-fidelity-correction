@@ -8,10 +8,10 @@
 
 - Generator: Gemini 3.1 Flash Image (`gemini-3.1-flash-image`)
 - Covered formats: `1:1` and `16:9` at both `1K` and `2K`
-- Training/evaluation pairs: 342
+- Evaluation samples: 352 total (342 grouped OOF + 10 external real-photo holdout)
+- Combined weighted mean improvement: `+0.4613%p`
 - Validation: source identity로 묶은 grouped 5-fold
 - Sampling: 이미지당 deterministic 12,000 pixels
-- External holdout: 학습에 사용하지 않은 자동차 실사 10장
 - Metric: MAE similarity percentage
 
 ## Components
@@ -23,7 +23,6 @@
 
 ## Risks
 
-- OOF 342장 중 17장은 보정 후 점수가 하락했습니다.
-- 외부 실사 10장 중 1장은 `-0.0600%p` 하락했습니다.
+- 전체 평가 352장 중 18장은 보정 후 점수가 하락했으며 최악값은 `-0.7590%p`였습니다.
 - 원본 이미지가 없는 실제 추론에서는 개선 여부를 직접 확인할 수 없습니다.
 - 기하 변화나 강한 재생성은 이 모델의 보정 범위를 벗어납니다.
