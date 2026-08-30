@@ -72,6 +72,12 @@ MAE similarity는 `100 * (1 - mean(abs(candidate - reference)) / 255)`로 계산
 
 ![Paired recurrence graph](experiments/recurrence_5x/similarity_curve.png)
 
+### 패스별 보정 전후 모음
+
+각 패스의 Gemini 출력과 보정 직후 결과를 같은 열에 배치했습니다. 아래 시트는 전체 흐름을 보여주며, [1024×1024 개별 파일 폴더](experiments/recurrence_5x/before_after_1024/)에서 원본 크기로 확인할 수 있습니다.
+
+![Correction before and after collection](experiments/recurrence_5x/before_after_5pass_contact_sheet.png)
+
 ### Pass 5 확대 비교
 
 파란 박스로 표시한 동일한 220×220 영역을 3배 확대해 원본, 무보정 Pass 5, 보정 Pass 5의 도어 하단·사이드실·바닥 질감을 비교했습니다.

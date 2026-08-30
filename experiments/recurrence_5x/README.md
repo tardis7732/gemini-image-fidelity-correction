@@ -30,6 +30,10 @@ corrected: G1 -> C1 -> G2' -> C2 -> G3' -> C3 -> G4' -> C4 -> G5' -> C5
 
 ![Paired recurrence contact sheet](comparison_contact_sheet.png)
 
+![Correction before and after collection](before_after_5pass_contact_sheet.png)
+
+Full 1024×1024 before/after images for all five passes are collected in [`before_after_1024/`](before_after_1024/).
+
 ![Pass 5 ROI zoom comparison](pass5_roi_zoom_comparison.png)
 
 Full 1024×1024 comparison files: [original](pass5_comparison_1024/01_original_1024.png), [uncorrected Pass 5](pass5_comparison_1024/02_pass5_uncorrected_1024.png), and [corrected Pass 5](pass5_comparison_1024/03_pass5_corrected_1024.png).
