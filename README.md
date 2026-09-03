@@ -1,5 +1,7 @@
 # Gemini Image Fidelity Correction
 
+[한국어](README.md) | [English](README.en.md)
+
 반복적인 생성형 이미지 편집 과정에서 발생하는 색상과 화질의 누적 변화를 완화하기 위해 개발한 reference-free 이미지 보정 모델입니다.
 
 ## 개발 배경
